@@ -8,9 +8,7 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
 while True: #repeat forever
     calculation_chosen = input("Please type equation here (+ - * / square cube pow mod)") # read input
     tokens = calculation_chosen.split(' ') # tokenize input
-    num1 = tokens[1]
-    if tokens[2] is True:
-        num2 = tokens[2]
+    
     # # num3 = tokens[3]
     
     if tokens[0] == "q":
@@ -18,28 +16,47 @@ while True: #repeat forever
         break
 
     elif tokens[0] == "+":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = add(float(num1), float(num2))
+        
         
 
     elif tokens[0] == "-":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = subtract(float(num1), float(num2))
+        
 
     elif tokens[0] == "*":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = multiply(float(num1), float(num2))
+        
 
     elif tokens[0] == "/":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = divide(float(num1), float(num2))
+        
 
     elif tokens[0] == "square":
+        num1 = tokens[1]
         result = square(float(num1))
 
     elif tokens[0] == "cube":
+        num1 = tokens[1]
         result = cube(float(num1))
 
     elif tokens[0] == "pow":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = power(float(num1), float(num2))
+        
 
     elif tokens[0] == "mod":
+        num1 = tokens[1]
+        num2 = tokens[2]
         result = mod(float(num1), float(num2))
 
     # elif tokens[0] == "x+":
